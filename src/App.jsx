@@ -1,8 +1,14 @@
 import React from 'react'
+import {Navbar, Hero, Footer} from './components'
+import { hero } from './data/travigodata'
 
 const App = () => {
   return (
-    <h1 className='text-lg text-red-500'>Have a good day</h1>
+    <>
+      <Navbar/>
+      <Hero hero={hero} />
+      <Footer/>
+    </>
   )
 }
 
