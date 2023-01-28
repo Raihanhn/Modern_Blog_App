@@ -14,8 +14,10 @@ const Pricings = ({pricingapi: {title, text, btn1, btn2, plans} }) => {
                     <button className="button-light sm:w-auto shadow-slate-200 bg-slate-100 " type='button'>{btn2} </button>
                 </div>
             </div>
-            <div className="">
-                <PriceCard/>
+            <div className="grid items-center grid-cols-2 md:grid-cols-1 w-full max-w-5xl md:max-w-md gap-9 lg:gap-5 m-auto">
+                {plans?.map((plan, i) => (
+                    <PriceCard key={i} plan={plan} />
+                ) )}
             </div>
         </div>
        </div>
